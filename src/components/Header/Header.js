@@ -7,6 +7,7 @@ import * as styled from "./Header.styled";
 import Burger from "./../Burger";
 import Menu from "./../Menu";
 import { useOnClickOutside } from "./../../hooks";
+import { Link } from "react-router-dom";
 
 function Header() {
   const node = useRef();
@@ -19,8 +20,12 @@ function Header() {
         <Menu open={open} setOpen={setOpen} />
       </styled.BurgerWrapper>
       <styled.LogoWrapper>
-        <styled.Online>ONLINE</styled.Online>
-        <styled.Soppa>SOPPA</styled.Soppa>
+        <styled.StyledLink to="/">
+          <styled.Online>ONLINE</styled.Online>
+        </styled.StyledLink>
+        <styled.StyledLink to="/">
+          <styled.Soppa>SOPPA</styled.Soppa>
+        </styled.StyledLink>
       </styled.LogoWrapper>
       <styled.IconWrapper>
         <styled.UserWrapper>

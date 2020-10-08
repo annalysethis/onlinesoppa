@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 export const Header = styled.header`
   width: 100%;
@@ -14,6 +15,7 @@ export const LogoWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 0 0 0 20px;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     font-size: 10px;
@@ -38,7 +40,7 @@ export const Online = styled.h2`
 export const IconWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 15px;
+  padding: 15px 15px 15px 0;
   align-items: center;
   justify-content: center;
 
@@ -77,4 +79,9 @@ export const StyledUserIcon = styled(FontAwesomeIcon)`
 export const StyledCartIcon = styled(FontAwesomeIcon)`
   font-size: 24px !important;
   cursor: pointer;
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;

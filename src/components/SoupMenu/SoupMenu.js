@@ -1,10 +1,45 @@
 import React, { Component } from "react";
+import SoupData from "./../Data/Soups.json";
+import * as styled from "./SoupMenu.styled";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import Navbar from "./../Navbar";
+import FoodFilter from "./../FoodFilter";
 
-export class SoupMenu extends Component {
+class SoupMenu extends Component {
   render() {
     return (
       <div>
-        <h1>HEJSAN</h1>
+        {/* <Location /> */}
+        <styled.AdressWrapper>
+          <styled.StyledUserIcon icon={faMapMarkerAlt} />
+          <styled.Location>
+            {this.props.location.state && this.props.location.state.adress}
+          </styled.Location>
+        </styled.AdressWrapper>
+        <Navbar />
+        <FoodFilter />
+        {SoupData.map((item, index) => {
+          return (
+            <styled.Container key={index} id={item.id}>
+              <styled.ImgWrapper>
+                <styled.Image src={item.image}></styled.Image>
+              </styled.ImgWrapper>
+              <styled.Wrapper>
+                <styled.SoupType>{item.type}</styled.SoupType>
+
+                <styled.SoupTitle>{item.title}</styled.SoupTitle>
+                <styled.Info>{item.info}</styled.Info>
+                <styled.IngrediensHeader>INGREDIENSER:</styled.IngrediensHeader>
+                <styled.IngrediensWrapper>
+                  <styled.Ingrediens>{item.ing1}</styled.Ingrediens>
+                  <styled.Ingrediens>{item.ing2}</styled.Ingrediens>
+                  <styled.Ingrediens>{item.ing3}</styled.Ingrediens>
+                  <styled.Ingrediens>{item.ing4}</styled.Ingrediens>
+                </styled.IngrediensWrapper>
+              </styled.Wrapper>
+            </styled.Container>
+          );
+        })}
       </div>
     );
   }

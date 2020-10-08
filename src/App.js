@@ -5,25 +5,22 @@ import Header from "./components/Header";
 import { theme } from "./theme";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./components/Home";
-import SoupMenu from "./components/SoupMenu/SoupMenu";
 
-function App() {
+import Routes from "./routes";
+
+function App(props) {
   return (
-    <div>
-      <Router>
-        <ThemeProvider theme={theme}>
-          <GlobalStyles />
-          <Header />
-          {/* <Form /> */}
-          <Switch>
-            {/* man skriver component= {Länken} så att den länkas till rätt sida */}
-            <Route path="/" exact component={Home} />
-            <Route path="/soupmenu" exact component={SoupMenu} />
-          </Switch>
-        </ThemeProvider>
-      </Router>
-    </div>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        {/* <div>
+          <FontAwesomeIcon icon={faMapMarkerAlt} />
+          <p>{props.location && props.location.adress}</p>
+        </div> */}
+        <Header />
+        <Routes />
+      </ThemeProvider>
+    </Router>
   );
 }
 

@@ -3,14 +3,24 @@ import { StyledMenu } from "./Menu.styled";
 import { bool } from "prop-types";
 import { Link } from "react-router-dom";
 
-const Menu = ({ open }) => {
+const Menu = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open}>
-      <Link to="/">Hem</Link>
-      <a href="/soupmenu">Meny</a>
-      <a href="/">Om oss</a>
-      <a href="/">Kontakt</a>
-      <a href="/">Logga in</a>
+      <Link to="/" onClick={() => setOpen(false)}>
+        Hem
+      </Link>
+      <Link to="/soupmenu" onClick={() => setOpen(false)}>
+        Meny
+      </Link>
+      <Link to="/about" onClick={() => setOpen(false)}>
+        Om oss
+      </Link>
+      <Link to="/contact" onClick={() => setOpen(false)}>
+        Kontakt
+      </Link>
+      <Link to="/login" onClick={() => setOpen(false)}>
+        Logga in
+      </Link>
     </StyledMenu>
   );
 };

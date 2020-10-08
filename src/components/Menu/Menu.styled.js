@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledMenu = styled.nav`
   display: flex;
+  width: 20%;
   flex-direction: column;
   justify-content: center;
   background: ${({ theme }) => theme.primaryLight};
@@ -15,7 +16,7 @@ export const StyledMenu = styled.nav`
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 80%;
+    width: 70%;
   }
 
   a {

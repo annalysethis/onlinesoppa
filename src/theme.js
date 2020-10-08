@@ -4,6 +4,7 @@ export const theme = {
   primaryLight: "#FDFDFD",
   primaryHover: "#343078",
   textColor: "#000",
+  textColor2: "#716d6a",
   mobile: "576px",
   tablet: "768px",
 };

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Krämig Pumpasoppa",
+    "info": "med vegansk ost och pumpafrön",
+    "id": "1",
+    "type": "Vegansk",
+    "ing1": "Pumpa ",
+    "ing2": "Morot",
+    "ing3": "Paprika",
+    "ing4": "Vitlök",
+    "price": "149",
+    "image": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+  },
+  {
+    "title": "Kryddig Tomassoppa",
+    "info": "med vegansk gräddfil och pumpafrön",
+    "id": "2",
+    "type": "Vegansk",
+    "ing1": "Tomat ",
+    "ing2": "Morot",
+    "ing3": "Paprika",
+    "ing4": "Vitlök",
+    "price": "149",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80"
+  },
+  {
+    "title": "Grön Soppa och Curry",
+    "info": "med brocolli, kale och avocado",
+    "id": "3",
+    "type": "Vegansk",
+    "ing1": "Brocolli ",
+    "ing2": "Avokado",
+    "ing3": "Kale",
+    "ing4": "Lök",
+    "price": "149",
+    "image": "https://images.unsplash.com/photo-1594756202469-9ff9799b2e4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1535&q=80"
+  }
+]
