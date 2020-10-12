@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import * as styled from "./Form.styled";
-import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
 class Form extends Component {
@@ -18,7 +17,7 @@ class Form extends Component {
     console.log("the final data is: ", data);
 
     this.props.history.push({
-      pathname: "/soupmenu",
+      pathname: "/location",
       search: "",
       state: data,
     });
@@ -32,11 +31,6 @@ class Form extends Component {
       adress: event.target.value,
     });
   };
-  // componentDidMount() {
-  //   this.setState({
-  //     adress: "Lagavägen",
-  //   });
-  // }
 
   render() {
     const { adress } = this.state;
@@ -53,8 +47,6 @@ class Form extends Component {
 
           <styled.StyledButton type="submit" value="Hitta Soppor" />
         </styled.Form>
-
-        {/* <p> Din address är: {adress}</p> */}
       </styled.Container>
     );
   }

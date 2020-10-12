@@ -13,10 +13,7 @@ function App(props) {
     <Router>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        {/* <div>
-          <FontAwesomeIcon icon={faMapMarkerAlt} />
-          <p>{props.location && props.location.adress}</p>
-        </div> */}
+
         <Header />
         <Routes />
       </ThemeProvider>

@@ -45,13 +45,3 @@ export const Nav = styled.nav`
     overflow: hidden;
   }
 `;
-
-// export const Button = styled.div`
-//   color: black;
-//   font-weight: bold;
-//   justify-content: space-between;
-//   background: ${({ theme }) => theme.mainColor};
-//   width: 0%;
-// `;
-
-// top right bottom left
