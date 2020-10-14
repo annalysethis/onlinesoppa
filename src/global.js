@@ -7,9 +7,12 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     
   }
-  *, *::after, *::before {
-    box-sizing: border-box;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    *, *::after, *::before {
+      box-sizing: border-box;
+    }
   }
+  
   
   body {
     font-family: 'Oxygen', sans-serif;

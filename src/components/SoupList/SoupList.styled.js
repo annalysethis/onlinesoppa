@@ -102,3 +102,18 @@ export const IngrediensHeader = styled.h5`
   margin: 0px;
   color: ${({ theme }) => theme.textColor2};
 `;
+
+export const titlePriceWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const Price = styled.h3`
+  margin: 0;
+  padding: 10px;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: 10px 0px;
+  }
+`;

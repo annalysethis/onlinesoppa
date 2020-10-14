@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import * as styled from "./FoodFilter.styled";
 import SoupList from "./../SoupList";
 

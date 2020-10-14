@@ -15,7 +15,7 @@ class SoupMenu extends Component {
 
   //filtering button functionality
   handleBtns = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     let productCopy;
 
     if (e.target.value === null) {

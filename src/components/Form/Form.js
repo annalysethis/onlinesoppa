@@ -17,7 +17,7 @@ class Form extends Component {
     console.log("the final data is: ", data);
 
     this.props.history.push({
-      pathname: "/location",
+      pathname: "/soupmenu",
       search: "",
       state: data,
     });
