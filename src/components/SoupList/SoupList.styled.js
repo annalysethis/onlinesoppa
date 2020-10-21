@@ -11,16 +11,15 @@ export const Container = styled.div`
   border-bottom: 1px solid #eee;
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
-   
-   width: 100%;
-    
-  }
+    max-width: 100%;
+     
+   }
   
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
     border:none;
     padding:0;
-   width: 100%;
+   max-width: 100%;
   }
 `;
 

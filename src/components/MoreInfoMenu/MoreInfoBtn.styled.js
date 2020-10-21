@@ -15,7 +15,7 @@ display:flex;
  @media (max-width: ${({ theme }) => theme.mobile}) {
   margin-bottom: 15px;
   width: 100%;
-       }
+}
 
 p{
   

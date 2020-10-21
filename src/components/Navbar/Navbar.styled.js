@@ -11,25 +11,28 @@ export const Nav = styled.nav`
 
 
   ul {
-    width: 100%;
+   min-width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-around;
     overflow: hidden;
     list-style: none;
+    
   }
 
   a {
     text-decoration: none;
     padding: 15px;
-   min-width: 33.33%;
+   min-width: 31%;
     display: flex;
     overflow: hidden;
     justify-content: center;
-    background: ${({ theme }) => theme.mainColor};
-
+    background: ${({ theme }) => theme.mainColor}; 
     
+    @media (max-width: ${({ theme }) => theme.tablet}) {
+      min-width: 28.5%;
+     }
   }
 
   li {
@@ -37,14 +40,11 @@ export const Nav = styled.nav`
     font-weight: bold;
     justify-content: space-between;
     overflow: hidden;
+
     @media (max-width: ${({ theme }) => theme.mobile}) {
       font-size: 14px;
-
     }
   }
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
-    overflow: hidden;
-  }
+  
+  
 `;

@@ -37,7 +37,7 @@ export default function MoreInfoMenu({ open, product }) {
         
         {/* Näringsvärde */}
         </styled.IngredientsList>
-        <styled.Headline>Näringsvärde per portion:</styled.Headline>
+        <styled.Title>Näringsvärde per portion:</styled.Title>
         <styled.NutricionList>
         {product.nutricionValue.map((nutr, index) => 
           <li key={index} >

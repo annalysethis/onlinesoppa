@@ -7,8 +7,8 @@ import {
 
 export default function ArrowBack() {
     return (
-        <styled.Container>
+        <div>
            <styled.Btn> <styled.StyledAngleIcon icon={faAngleLeft} /></styled.Btn> 
-        </styled.Container>
+        </div>
     )
 }

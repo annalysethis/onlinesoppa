@@ -9,11 +9,16 @@ import Menu from "./../Menu";
 import { useOnClickOutside } from "./../../hooks";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
+
 function Header(props) {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
   const [open, setOpen] = useState(false);
-  if (window.location.pathname === '/shoppingcart') return null;
+
+// if (window.location.pathname.match(/shoppingcart/)){
+//   return null
+// }
+  // if (window.location.pathname === '/shoppingcart') return null;
   return (
     <styled.Header>
       <styled.BurgerWrapper ref={node}>
@@ -51,3 +56,5 @@ function Header(props) {
 }
 
 export default Header;
+
+// const ComponentThatHides = withRouter(Header);

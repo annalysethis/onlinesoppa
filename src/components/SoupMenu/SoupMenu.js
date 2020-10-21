@@ -34,7 +34,7 @@ class SoupMenu extends Component {
     return (
       <div>
         <styled.AdressWrapper>
-          <styled.StyledUserIcon icon={faMapMarkerAlt} />
+          <styled.StyledMapIcon icon={faMapMarkerAlt} />
 
           <styled.Location>
             {this.props.location.state && this.props.location.state.adress}
