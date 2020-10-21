@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 export const Header = styled.header`
-  width: 100%;
+  min-width: 100%;
   display: flex;
   flex-direction: row;
   background: ${({ theme }) => theme.primaryLight};
@@ -84,4 +84,33 @@ export const StyledCartIcon = styled(FontAwesomeIcon)`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;
+`;
+
+export const AdressWrapper = styled.div`
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 0 5px 0;
+  overflow: hidden;
+
+  div{
+    display: flex;
+  flex-direction: row;
+  }
+
+  p{
+    margin: 0 0 10px 0;
+  font-weight: bold;
+  }
+`;
+//top right bottom left
+export const Location = styled.p`
+  margin: 0 0 10px 0;
+  font-weight: bold;
+`;
+
+export const StyledMapMarkerIcon = styled(FontAwesomeIcon)`
+  margin: 0px 10px 10px 0;
 `;

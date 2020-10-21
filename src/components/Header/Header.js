@@ -7,12 +7,13 @@ import * as styled from "./Header.styled";
 import Burger from "./../Burger";
 import Menu from "./../Menu";
 import { useOnClickOutside } from "./../../hooks";
-import { Link } from "react-router-dom";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
-function Header() {
+function Header(props) {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
   const [open, setOpen] = useState(false);
+  if (window.location.pathname === '/shoppingcart') return null;
   return (
     <styled.Header>
       <styled.BurgerWrapper ref={node}>
@@ -32,9 +33,19 @@ function Header() {
           <styled.StyledUserIcon icon={faUserCircle} />
         </styled.UserWrapper>
         <styled.CartWrapper>
+          <styled.StyledLink to='/shoppingcart'>
           <styled.StyledCartIcon icon={faShoppingCart} />
+          </styled.StyledLink>
         </styled.CartWrapper>
       </styled.IconWrapper>
+      {/* <styled.AdressWrapper>
+          <styled.StyledMapMarkerIcon icon={faMapMarkerAlt} />
+          <div>
+          <p>
+           {props.location && props.location.adress}
+          </p>
+          </div>
+        </styled.AdressWrapper> */}
     </styled.Header>
   );
 }

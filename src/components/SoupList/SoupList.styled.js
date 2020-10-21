@@ -1,23 +1,44 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Container = styled.div`
-  width: 100%;
+  max-width: 95%;
+  
+  padding:10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid #eee;
 
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+   
+   width: 100%;
+    
+  }
+  
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
+    border:none;
+    padding:0;
+   width: 100%;
   }
 `;
 
 export const Wrapper = styled.div`
-
+width:50%;
 display: flex:
 flex-direction: column;
 
+
+@media (max-width: ${({ theme }) => theme.tablet}) {
+width:60%;
+  
+}
+
 @media (max-width: ${({ theme }) => theme.mobile}) {
   align-self: flex-start;
+  width:100%;
+  
 
 }
 `;
@@ -32,7 +53,7 @@ export const Image = styled.img`
 `;
 
 export const ImgWrapper = styled.div`
-  width: 450px;
+  min-width: 350px;
   height: 250px;
   overflow: hidden;
   padding: 10px;
@@ -61,11 +82,11 @@ export const Location = styled.p`
   font-weight: bold;
 `;
 
-export const SoupTitle = styled.h3`
-  text-transform: uppercase;
-  margin: 0;
-  padding: 10px 10px 5px 10px;
-`;
+// export const SoupTitle = styled.h3`
+//   text-transform: uppercase;
+//   margin: 0;
+//   padding: 10px 10px 5px 10px;
+// `;
 
 export const Info = styled.p`
   padding: 2px 0 20px 10px;
@@ -82,38 +103,90 @@ export const SoupType = styled.p`
 `;
 
 //top right bottom left
-export const Ingrediens = styled.p`
-  text-align: center;
-  background: #eee;
-  padding: 5px;
-  min-width: 70px;
-  margin: 5px;
-  border-radius: 10px;
-`;
+// export const Ingredient = styled.p`
+//   text-align: center;
+//   padding: 5px;
+//   margin: 5px;
+//   background: #f6f6f6;
+//   border-radius: 10px;
+//   min-width: 40px;
+//   text-transform: uppercase;
+//   font-size: 13px;
+//   font-weight: bold;
+// `;
 
-export const IngrediensWrapper = styled.div`
+export const IngredientsList = styled.ul`
   display: flex;
   flex-direction: row;
-  padding: 0 0 10px 10px;
+  padding-left: 10px;
+  margin: 0;
+
+  li {
+    list-style: none;
+    background: #f6f6f6;
+    margin: 0 5px 0 5px;
+    border-radius: 10px;
+    min-width: 50px;
+  }
+
+  p {
+    text-align: center;
+    padding: 0 5px 0 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+  }
+`;
+
+export const CarrotIcon = styled(FontAwesomeIcon)`
+  display: none;
+  font-size: 25px;
+  margin: 0 0 5px 0;
+  color: ${({ theme }) => theme.textColor2};
 `;
 
 export const IngrediensHeader = styled.h5`
   padding: 0 0 2px 10px;
   margin: 0px;
   color: ${({ theme }) => theme.textColor2};
+  text-transform: uppercase;
 `;
 
 export const titlePriceWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-`;
+ 
+  h3{
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 10px 5px 10px;
 
-export const Price = styled.h3`
-  margin: 0;
-  padding: 10px;
+    @media (max-width: ${({ theme }) => theme.tablet}) {
+      padding: 10px 10px 0px 10px;
+    }
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    padding: 10px 0px;
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      // padding: 10px 10px 0px 0px;
+    }
   }
+ 
 `;
+
+// export const Price = styled.h3`
+//   // margin: 0;
+//   // padding: 10px;
+  
+//   margin: 0;
+//   padding: 10px 10px 5px 10px;
+
+//   // @media (max-width: ${({ theme }) => theme.mobile}) {
+//   //   padding: 10px 0px;
+//   // }
+// `;
+
+//top right bottom left
+
+// text-transform: uppercase;
+// margin: 0;
+// padding: 10px 10px 5px 10px;

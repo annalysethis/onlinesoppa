@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 
+// Burger menu
+
 export const useOnClickOutside = (ref, handler) => {
   useEffect(() => {
     const listener = (event) => {
@@ -14,3 +16,7 @@ export const useOnClickOutside = (ref, handler) => {
     };
   }, [ref, handler]);
 };
+
+
+// MoreInfoMenu
+
