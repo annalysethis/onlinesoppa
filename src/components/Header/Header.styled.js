@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 export const Header = styled.header`
+position:fixed;
+z-index: 1;
   min-width: 100%;
   display: flex;
   flex-direction: row;
@@ -49,20 +51,6 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const CartWrapper = styled.div`
-  padding: 5px;
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    padding: 6px;
-  }
-`;
-export const UserWrapper = styled.div`
-  padding: 5px;
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    padding: 6px;
-  }
-`;
 
 export const BurgerWrapper = styled.div`
   display: flex;
@@ -74,11 +62,13 @@ export const BurgerWrapper = styled.div`
 export const StyledUserIcon = styled(FontAwesomeIcon)`
   font-size: 24px !important;
   cursor: pointer;
+  margin:10px 0px 10px 0;
 `;
 
 export const StyledCartIcon = styled(FontAwesomeIcon)`
   font-size: 24px !important;
   cursor: pointer;
+  margin:10px;
 `;
 
 export const StyledLink = styled(Link)`
@@ -113,4 +103,10 @@ export const Location = styled.p`
 
 export const StyledMapMarkerIcon = styled(FontAwesomeIcon)`
   margin: 0px 10px 10px 0;
+`;
+
+export const CartBtn = styled.button`
+border:none;
+background: none;
+padding: 0 5px 0 5px;
 `;

@@ -8,12 +8,21 @@ import Burger from "./../Burger";
 import Menu from "./../Menu";
 import { useOnClickOutside } from "./../../hooks";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import ShoppingCart from "../ShoppingCart"
 
+
+// const PAGE_PRODUCTS = "products";
+// const PAGE_CART = "cart";
 
 function Header(props) {
+  
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
   const [open, setOpen] = useState(false);
+
+  // const navigateTo = (nextPage) => {
+  //   setPage(nextPage);
+  // };
 
 // if (window.location.pathname.match(/shoppingcart/)){
 //   return null
@@ -34,14 +43,16 @@ function Header(props) {
         </styled.StyledLink>
       </styled.LogoWrapper>
       <styled.IconWrapper>
-        <styled.UserWrapper>
+       
           <styled.StyledUserIcon icon={faUserCircle} />
-        </styled.UserWrapper>
-        <styled.CartWrapper>
-          <styled.StyledLink to='/shoppingcart'>
-          <styled.StyledCartIcon icon={faShoppingCart} />
-          </styled.StyledLink>
-        </styled.CartWrapper>
+      
+          {/* <styled.StyledLink to='/shoppingcart'> */}
+          {/* <styled.CartBtn onClick={() => navigateTo(PAGE_CART)}><styled.StyledCartIcon icon={faShoppingCart} />{cart.length}</styled.CartBtn> */}
+          {/* <styled.StyledCartIcon icon={faShoppingCart} /> */}
+          <ShoppingCart/>
+          {/* {props.cart.length} */}
+          {/* </styled.StyledLink> */}
+       
       </styled.IconWrapper>
       {/* <styled.AdressWrapper>
           <styled.StyledMapMarkerIcon icon={faMapMarkerAlt} />

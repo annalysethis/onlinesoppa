@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect} from "react";
 
 // Burger menu
 
@@ -18,5 +18,10 @@ export const useOnClickOutside = (ref, handler) => {
 };
 
 
-// MoreInfoMenu
+// AddToCart
+
+
+
+
+
 

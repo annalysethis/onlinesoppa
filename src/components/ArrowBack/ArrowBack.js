@@ -4,11 +4,11 @@ import {
   } from "@fortawesome/free-solid-svg-icons";
   import * as styled from "./ArrowBack.styled";
 
-
-export default function ArrowBack() {
+  const PAGE_PRODUCTS = "products";
+export default function ArrowBack({navigateTo}) {
     return (
         <div>
-           <styled.Btn> <styled.StyledAngleIcon icon={faAngleLeft} /></styled.Btn> 
+           <styled.Btn onClick={() => navigateTo(PAGE_PRODUCTS)}> <styled.StyledAngleIcon icon={faAngleLeft} /></styled.Btn> 
         </div>
     )
 }

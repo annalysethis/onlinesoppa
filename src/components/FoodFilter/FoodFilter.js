@@ -1,6 +1,6 @@
 import React from "react";
 import * as styled from "./FoodFilter.styled";
-import SoupList from "./../SoupList";
+import SoupItem from "../SoupItem";
 
 export default function FoodFilter(props) {
   return (
@@ -17,7 +17,7 @@ export default function FoodFilter(props) {
 
       <div>
         {props.products.map((product) => {
-          return <SoupList key={product.id} product={product} />;
+          return <SoupItem key={product.id} product={product} />;
         })}
       </div>
     </React.Fragment>

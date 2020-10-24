@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import Form from "./../Form";
 import souplogo from "./../../images/souplogo.png";
 import * as styled from "./Home.styled";
+import Header from "../Header"
 
 export class Home extends Component {
   render() {
     return (
       <div>
+        <Header/>
         <Form />
         <styled.Headline>Delad glädje är dubbel glädje</styled.Headline>
         <styled.ImgWrapper>

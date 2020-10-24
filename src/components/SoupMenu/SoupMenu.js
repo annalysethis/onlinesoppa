@@ -1,12 +1,17 @@
-import React, { Component } from "react";
+import React, { Component, useContext  } from "react";
+import {CartContext} from "../ShoppingCart/CartContext"
 import { data } from "../Data/data";
 import * as styled from "./SoupMenu.styled";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "./../Navbar";
 import FoodFilter from "./../FoodFilter";
-// import Location from "./../Location";
+import Header from "../Header"
+
+
+
 
 class SoupMenu extends Component {
+  
   state = {
     products: data,
     productCopy: data,
@@ -30,9 +35,14 @@ class SoupMenu extends Component {
       productCopy: productCopy,
     });
   };
+
+
   render() {
     return (
       <div>
+      
+      <Header/>
+     
         <styled.AdressWrapper>
           <styled.StyledMapIcon icon={faMapMarkerAlt} />
 
@@ -40,12 +50,14 @@ class SoupMenu extends Component {
             {this.props.location.state && this.props.location.state.adress}
           </styled.Location>
         </styled.AdressWrapper>
+       
         <Navbar />
         <FoodFilter
           products={this.state.productCopy}
           handleBtns={this.handleBtns}
           btns={this.state.btns}
         />
+      
       </div>
     );
   }
