@@ -178,7 +178,6 @@ top: 200px;
 
 @media (max-width: ${({ theme }) => theme.mobile}) {
 
- z-index:10000;
 `;
 
 // export const Price = styled.h3`

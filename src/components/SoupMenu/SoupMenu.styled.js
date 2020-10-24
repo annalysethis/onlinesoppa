@@ -1,6 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
+export const MainContainer = styled.div`
+position: relative;
+`;
+
 export const Container = styled.div`
 padding-top:80px;
 `;

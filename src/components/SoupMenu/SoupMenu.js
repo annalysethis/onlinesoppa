@@ -39,7 +39,7 @@ class SoupMenu extends Component {
 
   render() {
     return (
-      <div>
+      <styled.MainContainer>
       <styled.HeaderWrapper>
       <Header/>
       </styled.HeaderWrapper>
@@ -59,7 +59,7 @@ class SoupMenu extends Component {
           btns={this.state.btns}
         />
         </styled.Container>
-      </div>
+      </styled.MainContainer>
     );
   }
 }
