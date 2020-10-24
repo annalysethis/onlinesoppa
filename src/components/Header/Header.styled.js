@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 export const Header = styled.header`
-position:fixed;
 z-index: 1;
   min-width: 100%;
   display: flex;

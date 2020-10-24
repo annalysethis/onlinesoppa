@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 export const Container = styled.div`
-position:absolute;
+padding-top:80px;
 `;
 
 export const StyledMapIcon = styled(FontAwesomeIcon)`
@@ -24,14 +24,9 @@ export const Location = styled.p`
   font-weight: bold;
 `;
 
-export const AddBtn = styled.button`
-position:absolute;
-font-size: 20px;
-right: 16px;
- 
-
-@media (max-width: ${({ theme }) => theme.mobile}) {
- 
-}
+export const HeaderWrapper = styled.div`
+width:100%;
+z-index:1;
+position:fixed;
 
 `;

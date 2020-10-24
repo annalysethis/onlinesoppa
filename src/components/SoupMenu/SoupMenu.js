@@ -40,9 +40,10 @@ class SoupMenu extends Component {
   render() {
     return (
       <div>
-      
+      <styled.HeaderWrapper>
       <Header/>
-     
+      </styled.HeaderWrapper>
+      <styled.Container>
         <styled.AdressWrapper>
           <styled.StyledMapIcon icon={faMapMarkerAlt} />
 
@@ -57,7 +58,7 @@ class SoupMenu extends Component {
           handleBtns={this.handleBtns}
           btns={this.state.btns}
         />
-      
+        </styled.Container>
       </div>
     );
   }

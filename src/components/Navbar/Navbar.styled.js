@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-margin-top:45px;
+
   min-width: 100%;
   background: ${({ theme }) => theme.mainColor};
   display: flex;
