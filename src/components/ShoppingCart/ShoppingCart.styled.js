@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
 display:flex;
@@ -30,11 +30,22 @@ export const StyledCartIcon = styled(FontAwesomeIcon)`
 
 export const Cart = styled.span`
 position:absolute;
-right:5px;
+right:15px;
 top:18px;
 background: ${({ theme }) => theme.mainColor};
 border-radius: 50%;
 padding: 0 4px 0 4px;
 font-size: 16px;
 text-align:center;
+
+@media (max-width: ${({ theme }) => theme.mobile}) {
+  right:5px;
+  top:18px;
+}
+
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;

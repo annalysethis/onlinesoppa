@@ -46,12 +46,12 @@ function Header(props) {
        
           <styled.StyledUserIcon icon={faUserCircle} />
       
-          {/* <styled.StyledLink to='/shoppingcart'> */}
+          <styled.StyledLink to='/shoppinglist'>
           {/* <styled.CartBtn onClick={() => navigateTo(PAGE_CART)}><styled.StyledCartIcon icon={faShoppingCart} />{cart.length}</styled.CartBtn> */}
           {/* <styled.StyledCartIcon icon={faShoppingCart} /> */}
           <ShoppingCart/>
           {/* {props.cart.length} */}
-          {/* </styled.StyledLink> */}
+          </styled.StyledLink>
        
       </styled.IconWrapper>
       {/* <styled.AdressWrapper>

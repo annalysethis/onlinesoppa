@@ -17,6 +17,7 @@ margin:25px;
 export const Btn = styled.button`
 border: none;
 background: none;
+cursor:pointer;
 
 
 `;

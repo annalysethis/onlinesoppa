@@ -44,7 +44,6 @@ export default function SoupList(props ) {
             alt={props.product.title}
           ></styled.Image>
           <styled.AddBtn  onClick={addToCart}>Add to Cart</styled.AddBtn>
-          {/* <styled.AddBtn onClick={addToCart}>Add to Cart</styled.AddBtn> */}
         </styled.ImgWrapper>
         
         <styled.Wrapper>
