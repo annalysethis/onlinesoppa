@@ -1,10 +1,10 @@
 import React, { useState, useRef, useContext } from "react";
 import * as styled from "./SoupItem.styled";
-import { data } from "../Data/data";
+// import { data } from "../Data/data";
 import MoreInfoMenu from "../MoreInfoMenu";
 import MoreInfoBtn from "../MoreInfoMenu/MoreInfoBtn"
-import { faCarrot } from "@fortawesome/free-solid-svg-icons";
 import {CartContext} from "../ShoppingCart/CartContext"
+import AddButton from "../AddButton"
 
 // const node = useRef();
 // useOnClickOutside(node, () => setOpen(false));
@@ -30,10 +30,10 @@ export default function SoupList(props ) {
 
   const addToCart = () =>{
     console.log("clicked..");
-    const soup = {title: props.product.title, price: props.product.price}
+    //const soup = {title: props.product.title, price: props.product.price}
+    const soup = {...props.product}
     setCart(currentCartState =>[...currentCartState, soup]);
 }
-
 
   return (
     <React.Fragment>
@@ -43,7 +43,8 @@ export default function SoupList(props ) {
             src={props.product.image}
             alt={props.product.title}
           ></styled.Image>
-          <styled.AddBtn  onClick={addToCart}>Add to Cart</styled.AddBtn>
+          <AddButton addToCart={addToCart} />
+      
         </styled.ImgWrapper>
         
         <styled.Wrapper>
@@ -53,7 +54,7 @@ export default function SoupList(props ) {
             <h3>{props.product.price} KR</h3>
           </styled.titlePriceWrapper>
           <styled.Info>{props.product.info}</styled.Info>
-          <styled.IngrediensHeader>Ingredienser:</styled.IngrediensHeader>
+          <styled.IngredientsHeader>Ingredienser:</styled.IngredientsHeader>
           
           <styled.IngredientsList>
             {!open &&<li>
@@ -85,28 +86,5 @@ export default function SoupList(props ) {
   );
 }
 {
-  /* {SoupData.map((item, index) => {
-        return (
-          <React.Fragment>
-            <styled.Container key={index} id={item.id}>
-              <styled.ImgWrapper>
-                <styled.Image src={item.image}></styled.Image>
-              </styled.ImgWrapper>
-              <styled.Wrapper>
-                <styled.SoupType>{item.category}</styled.SoupType>
 
-                <styled.SoupTitle>{item.title}</styled.SoupTitle>
-                <styled.Info>{item.info}</styled.Info>
-                <styled.IngrediensHeader>INGREDIENSER:</styled.IngrediensHeader>
-                <styled.IngrediensWrapper>
-                  <styled.Ingrediens>{item.ing1}</styled.Ingrediens>
-                  <styled.Ingrediens>{item.ing2}</styled.Ingrediens>
-                  <styled.Ingrediens>{item.ing3}</styled.Ingrediens>
-                  <styled.Ingrediens>{item.ing4}</styled.Ingrediens>
-                </styled.IngrediensWrapper>
-              </styled.Wrapper>
-            </styled.Container>
-          </React.Fragment>
-        );
-      })} */
 }

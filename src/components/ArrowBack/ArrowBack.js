@@ -6,9 +6,13 @@ import {
 
   
 export default function ArrowBack() {
+//     const navigateBack = () => {
+    
+//   }
+
     return (
         <div>
-           <styled.Btn > <styled.StyledAngleIcon icon={faAngleLeft} /></styled.Btn> 
+           <styled.Btn> <styled.StyledAngleIcon icon={faAngleLeft} /></styled.Btn> 
         </div>
     )
 }

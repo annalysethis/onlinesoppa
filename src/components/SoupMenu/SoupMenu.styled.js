@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
 position: relative;
+overflow:hidden;
 `;
 
 export const Container = styled.div`

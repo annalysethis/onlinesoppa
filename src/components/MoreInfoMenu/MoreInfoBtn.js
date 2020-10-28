@@ -10,8 +10,9 @@ import {
     return (
       <styled.BtnContainer open={open} onClick={() => setOpen(!open)}>
             <p>Mer information</p>
-            <styled.StyledCaretIcon icon={faAngleDown} />
-
+           
+            <styled.StyledCaretIcon icon={faAngleDown} open={open} onClick={() => setOpen(!open)}/>
+            
         </styled.BtnContainer>
     );
   };

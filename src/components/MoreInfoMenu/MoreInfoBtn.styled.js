@@ -18,21 +18,24 @@ display:flex;
 }
 
 p{
-  
+
   margin:0;
   margin-left: 10px;
   text-transform: uppercase;
   color: ${({ theme }) => theme.textColor2};
   font-size: 15px;
-}
 
 `;
+
+// :nth-child(2)
 
 export const StyledCaretIcon = styled(FontAwesomeIcon)`
   font-size: 24px !important;
   color: ${({ theme }) => theme.textColor2};
   margin-right: 10px;
   
-  transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+  transform: ${({ open }) => (open ? "rotate(-180deg)" : "rotate(0)")};
+  
+
   
 `;
