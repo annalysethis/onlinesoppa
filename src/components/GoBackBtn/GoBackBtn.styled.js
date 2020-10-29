@@ -10,14 +10,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const StyledAngleIcon = styled(FontAwesomeIcon)`
 font-size: 25px !important;
-margin:25px;
 
 `;
 
 export const Btn = styled.button`
+position:absolute;
+padding:20px;
 border: none;
 background: none;
 cursor:pointer;
+top:0px;
+left:10px;
 
 
 `;

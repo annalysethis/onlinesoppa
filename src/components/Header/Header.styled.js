@@ -41,12 +41,12 @@ export const Online = styled.h2`
 export const IconWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 15px 15px 15px 0;
+  padding: 11px 15px 15px 0;
   align-items: center;
   justify-content: center;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    padding: 5px;
+    padding: 1px 5px 5px 5px;
   }
 `;
 

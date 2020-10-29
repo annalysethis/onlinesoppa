@@ -1,9 +1,10 @@
 import React, {useContext} from 'react'
 import * as styled from "./ShoppingList.styled";
-import ArrowBack from "../ArrowBack"
+import GoBackBtn from "../GoBackBtn"
 import ShoppingCart from "../ShoppingCart"
 import {CartContext} from "../ShoppingCart/CartContext";
 import { calculateCart } from "./index.js";
+import CartButton from "../CartButton";
 
 export default function ShoppingList(props) {
     const [cart, setCart] = useContext(CartContext)
@@ -32,21 +33,20 @@ export default function ShoppingList(props) {
     return (
         <div>
         <styled.HeaderWrapper>
-        <ArrowBack/>
+        <GoBackBtn/>
             <h2>VARUKORG</h2>
             <ShoppingCart/>
             </styled.HeaderWrapper>
 
-            <styled.Wrapper>
+            <styled.TitleWrapper>
           <h4>Antal</h4><h4>Pris</h4>
-          </styled.Wrapper>
+          </styled.TitleWrapper>
         <styled.ProductContainer>
           {soupAmounts.map((product, idx) => {
             return (
               <div key={idx} >
-                <styled.NewImgWrapper image={product.image}>
-   
-              </styled.NewImgWrapper>
+                <styled.NewImgWrapper image={product.image}/>
+
                 <h4>{product.title}</h4>
                 <styled.AmountWrapper>
                 <button onClick={() => decreaseAmount(product)}>-</button>
@@ -58,31 +58,22 @@ export default function ShoppingList(props) {
               </div>
             );
           })}
-          {/* {soupAmounts.map((product, idx) => {
-            return (
-              <div key={idx} >
-                <styled.ImgWrapper>
-              <img src={product.image} alt={product.title}></img>
-              </styled.ImgWrapper>
-                <h4>{product.title}</h4>
-                <styled.AmountWrapper>
-                <button onClick={() => decreaseAmount(product.amount)}>-</button>
-                <p>{product.amount}</p>
-                <button onClick={() => increaseAmount(product.amount)}>+</button>
-                </styled.AmountWrapper>
-                <h4>{product.price} kr</h4>
-                <styled.DeleteBtn onClick={() => removeFromCart(product)}>x</styled.DeleteBtn>
-              </div>
-            );
-          })} */}
- 
+ <hr/>
           </styled.ProductContainer>
+          <styled.SectionContainer>
+            <h3>Meddelande till Köket</h3>
+            <p>Här kan du skriva om det är något du vill ta bort eller lägga till i din beställning.</p>
+<textarea type="text"></textarea>
+<styled.SaveBtn>Spara</styled.SaveBtn>
+
+</styled.SectionContainer>
+
           <styled.TotalPrice>
           <h3>Totalt (ink.moms):</h3>
           <h3>{totalPrice}</h3>
           </styled.TotalPrice>
-            </div>
 
-            
+          <CartButton/>
+            </div>
     )
 }

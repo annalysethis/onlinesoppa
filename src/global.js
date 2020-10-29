@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
    
     
   }
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+   @media (max-width: ${({ theme }) => theme.mobile}) {
     *, *::after, *::before {
       box-sizing: border-box;
     }
