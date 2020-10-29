@@ -10,31 +10,16 @@ export default function ShoppingList(props) {
     //const totalPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
     
     const decreaseAmount = (productToDecrease) => {
-      console.log(productToDecrease)
-      // kolla titlen, ta bort första bästa soppa ur cart med den titeln
-      //productToDecrease.amount += 1;
-      //setCart(currentCartState =>[...currentCartState, productToDecrease]);
-      //let newCart = cart.find(item => item.title == productToDecrease.title)
+      // console.log(productToDecrease)
       let newCart = [];
       let foundIndex = cart.findIndex((t) => {return (t.title == productToDecrease.title)})
-      console.log("found at " + foundIndex)
-      //newCart = cart.filter((elem, index, self) => self.findIndex(
-      //  (t) => {return (t.title !== elem.title)}) === index)
+      // console.log("found at " + foundIndex)
       newCart = cart.filter((elem, index) => (index !== foundIndex))
-      //cart.splice(foundIndex, 1)
-      //itemToChange.amount -=1;
-      //setCart(currentCartState =>[...currentCartState, productToIncrease]);
-      
       setCart(newCart);
     }
     
     const increaseAmount = (productToIncrease) => {
-      //productToIncrease.amount += 1;
-      //productToIncrease ??
-      //let itemToChange = cart.filter(item => item.title == productToIncrease.title)
-      //itemToChange.amount +=1;
       setCart(currentCartState =>[...currentCartState, productToIncrease]);
-      //setCart(cart);
     }
 
 
