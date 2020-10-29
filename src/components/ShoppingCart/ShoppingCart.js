@@ -1,6 +1,6 @@
 import  React, {useContext} from 'react'
 import * as styled from "./ShoppingCart.styled";
-import ArrowBack from "../ArrowBack"
+import ArrowBack from "../GoBackBtn"
 import {
     faShoppingCart,
     
@@ -12,7 +12,6 @@ export default function ShoppingCart() {
     const [cart, setCart] = useContext(CartContext)
     return (
         <styled.Container>
-       
            <span >
            <styled.StyledCartIcon  icon={faShoppingCart} />
            </span>

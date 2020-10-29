@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 //top right bottom left
 export const HeaderWrapper = styled.div`
+
 display: flex;
 justify-content: center; 
 align-items:center;
@@ -63,21 +64,6 @@ border: 3px solid ${({ theme }) => theme.mainColor};
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 50px;
     height: 50px;
-    
-  }
-`;
-
-
-export const ImgWrapper = styled.div`
-position:relative;
-width: 120px;
-height: 120px;
-  overflow: hidden;
-  padding:0;
-  margin:0;
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-   
     
   }
 `;
