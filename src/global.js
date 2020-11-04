@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
   
   body {
     
-    font-family: "Barlow Condensed", sans-serif;
+    // font-family: "Barlow Condensed", sans-serif;
     min-height: 100vh;
     
     background: ${({ theme }) => theme.primaryLight};

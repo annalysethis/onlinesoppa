@@ -27,8 +27,6 @@ p{
 
 `;
 
-// :nth-child(2)
-
 export const StyledCaretIcon = styled(FontAwesomeIcon)`
   font-size: 24px !important;
   color: ${({ theme }) => theme.textColor2};
