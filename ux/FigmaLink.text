@@ -1,0 +1,24 @@
+# Link to our figma prototype:
+
+https://www.figma.com/file/BVNNxjzJWyCKvKSEE7sYCA/Online-Soup-Grupp-5?node-id=469%3A136
+
+# Feedback from our ux teacher on our prototype:
+
+Hej, 
+Jag har nu gått igenom ert grupparbete och upplever det överlag vara bra och välstrukturerat. Ni gjorde även en fin presentation av er prototyp och beskrev väl hur ni gått tillväga för att komma fram till ert lösningsförslag. 
+
+Ni har gjort ett bra grundarbete för att nå fram till ert slutliga lösningsförslag vilket inkluderar exempelvis konkurrentanalys. Via det fick ni ju exempelvis input på att leveransadress kan behöva läggas till allra först i tjänstens flöde. 
+
+Här kommer feedback på er prototyp: Mitt helhetsintryck av prototypen är bra. Mer i detalj:  
+1. Bra startsida där jag snabbt får en överblick av vad jag kan förvänta mig av denna tjänst! Och bra namn!
+2. Bra disposition av innehållet fördelat på soppa, dryck och tillbehör i toppmenyn på listningssidan av soppor. Bra produktkort som snabbt ger översiktsinfo om ingredienser. Detaljerad info kan visas och är ett aktivt val, bra. Väldigt fint presenterat med ingredienser och näringsvärde per portion. 
+Smidigt att lägga till en soppa i varukorgen och superfin animering när detta sker! Det enda jag saknar här är att kunna välja antal direkt på produkten dvs om jag vill beställa fem st av en soppa. 
+3. I föregående steg utgick jag från att den gröna knappen med texten Lagd i varukorg endast var en effekt och tänkt att fadeas ut när jag klickat på plustecknet inne på en produkt. Så var inte fallet. Det blev rätt förvirrande att ha den som en aktiv knapp ute i huvudytan. 
+4. Bra sammanställning av varukorgen men överväg att omplacera/omformulera rubriken till “Skickar du till en vän?” då risken är stor att kunderna misstar det för ett inputfält där de lägger till instruktioner till restaurangen (tänk, ingen lök, extra paprika osv). 
+5. I detta steg anger jag adressen. Det blir lite knepigt att förstå var jag är i flödet här då jag i steg för steg wizarden i toppen är på steg 2 (ange adress) men det är första gången jag noterar den guiden. Vidare står det “Paketet skickas till” och sedan namn och telefonnummer till mottagaren. Är det en beställning till mig eller en gåva till någon annan som avses här? Här skulle jag rekommendera att ni dels byter rubrik och skriver din beställning istället. Och sedan ange ditt namn och telefonnummer för beställning till mig. Då minskar risken för missförstånd. 
+6. Fint betalflöde ni gjort ut. I 99 fall av 100 behöver man som UXare aldrig göra detta eftersom kunderna här jackar på en tredjepartslösning från någon betaltjänst (Klarna, Qliro etc) så ni vet.  
+7. Bra bekräftelsesida med tydliga informationsdelar på. det enda jag kan önska här är att göra info om leveranstid lite större då det ofta är det som kunderna har i fokus när de väl kommit igenom hela beställningsflödet. 
+8. Toppenbra trackingsida! 
+
+För att summera, bra gjort! Tack för ett fint arbete, ni är godkända på denna uppgift. 
+//Sussi

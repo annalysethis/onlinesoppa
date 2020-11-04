@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-// <a href="https://icons8.com/icon/1655/pumpkin">Pumpkin icon by Icons8</a>
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
   html, body {
     margin: 0;

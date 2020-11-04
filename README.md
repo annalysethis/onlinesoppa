@@ -1,3 +1,15 @@
+## OnlineSoppa
+
+This app was made by me as a school project. I didn't add backend to it beacuse of the time limit but maybe I will continue work on it in the future.
+
+## Usage
+
+So this is a soup ordering app where you can order soups and get them delivered home. The styling is made with styled-components and the functionality is made with JavaScript.
+
+# Made by:
+
+Anna Hurtig
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
