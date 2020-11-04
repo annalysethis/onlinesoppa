@@ -19,6 +19,20 @@ z-index:-1;
 
 export const AccountHeader = styled.header`
  width:100%;
+ position:relative;
+
+ h4{
+   position:absolute;
+   top:10px;
+   right: 20px;
+ }
+
+ img{
+   width:40px;
+  position:absolute;
+  top:10px;
+  right: 150px;
+ }
 `;
 
 export const YellowBox = styled.div`

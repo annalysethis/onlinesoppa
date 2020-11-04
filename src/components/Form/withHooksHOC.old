@@ -1,0 +1,10 @@
+import React, {useContext}  from 'react';
+import { CartContext } from "../ShoppingCart/CartContext";
+
+export const WithHooksHOC = (Component) => {
+  const [cart, setCart, address, setAddress] = useContext(CartContext)
+  return (props) => {
+
+    return <Component address={address} setAdress={setAddress} {...props} />;
+  };
+};

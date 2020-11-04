@@ -1,22 +1,24 @@
-import React, { useState }from 'react'
+import React from 'react'
 import * as styled from "./AddButton.styled";
-import { bool, func } from "prop-types";
+import ToggleContent from "../PopupWindow/ToggleContent"
+import PopupWindow from "../PopupWindow"
 
 export default function AddButton({addToCart}) {
-
-    const [check, setChecked] = useState(false);
   
     return (
         <React.Fragment >
-        <styled.AddBtn onClick={addToCart}  >
+        <ToggleContent
+      toggle={show => <styled.AddBtn onClick={() => {addToCart(); show();}}>
             <div/>
             <div/>
-          </styled.AddBtn>
+          </styled.AddBtn>}
+      content={hide => ( 
+          <PopupWindow >
+          <h5>LAGD I VARUKORG</h5>
+          </PopupWindow>
+      )}
+    />
         </React.Fragment>
     )
 }
 
-// AddButton.propTypes = {
-//     check: bool.isRequired,
-//     setChecked: func.isRequired,
-//   };

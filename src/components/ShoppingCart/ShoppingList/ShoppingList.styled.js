@@ -1,5 +1,9 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
+export const MainContainer = styled.div`
+min-height:100vh;
+`;
 
 //top right bottom left
 export const HeaderWrapper = styled.div`
@@ -18,12 +22,17 @@ h2{
 
 @media (max-width: ${({ theme }) => theme.mobile}) {
     margin-right:5px;
-    
+    font-size: 13px;
   }
 `;
 
 export const ProductContainer = styled.section`
+
+position:relative;
 padding: 0 15px 0 15px;
+
+
+
 
 div{
     padding:10px;
@@ -52,8 +61,8 @@ font-weight: 1;
 
 export const NewImgWrapper = styled.div`
 position:relative;
-width: 80px;
-height: 80px;
+width: 50px;
+height: 50px;
 border-radius: 50%;
 border: 3px solid ${({ theme }) => theme.mainColor};
   overflow: hidden;
@@ -61,11 +70,7 @@ border: 3px solid ${({ theme }) => theme.mainColor};
   margin:10px;
   background: ${props => `url(${props.image}) no-repeat center center`};
   background-size: cover;
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 50px;
-    height: 50px;
-    
-  }
+
 `;
 
 
@@ -84,23 +89,40 @@ display:flex;
 flex-direction:row;
 justify-content: flex-end;
 margin:0;
-
-
-h4{
-    padding-right: 180px;
-    margin:0;
-
-    @media (max-width: ${({ theme }) => theme.tablet}) {
-        padding-right: 100px;
-       
-       }
-
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-    padding-right: 50px;
-   
-   }
+padding:0;
 
 `;
+
+export const AmountTitle = styled.h4`
+padding-right: 130px;
+margin:0;
+
+@media (max-width: ${({ theme }) => theme.tablet}) {
+  padding-right: 100px;
+ 
+ }
+
+@media (max-width: ${({ theme }) => theme.mobile}) {
+padding-right: 50px;
+
+}
+`;
+
+export const PriceTitle = styled.h4`
+padding-right: 180px;
+margin:0;
+
+@media (max-width: ${({ theme }) => theme.tablet}) {
+  padding-right: 100px;
+ 
+ }
+
+@media (max-width: ${({ theme }) => theme.mobile}) {
+padding-right: 50px;
+
+}
+`;
+
 export const AmountWrapper = styled.div`
 display:flex;
 flex-direction:row;
@@ -140,11 +162,17 @@ padding: 0 10px 0 10px;
 `;
 
 export const SectionContainer = styled.section`
-padding: 10px 50px;
+position:relative;
+padding: 10px 80px;
 display: flex;
 flex-direction:column;
 align-items: center; 
  text-align:center;
+
+ @media (max-width: ${({ theme }) => theme.mobile}) {
+  padding: 10px 50px;
+   
+   }
 
 h3{
   margin:5px;
@@ -156,24 +184,33 @@ p{
 
 textarea{
   padding:5px;
-    width:60%;
+  width:98%;
     height: 90px;
     margin:5px;
+    border: 1px solid ${({ theme }) => theme.mainColor};
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      width:80%;
-    height: 70px;
+    width:100%;
+    height: 80px;
     
      
      }
-
-    
 }
 
 `;
 
 export const SaveBtn = styled.button`
-padding: 5px 20px;
+padding: 5px 15px;
+font-weight: bold;
+font-size: 17px;
 border: none;
 background:${({ theme }) => theme.mainColor};
+display:flex;
+align-self: flex-end;
+
+`;
+
+export const StyledLink = styled(Link)`
+width:100%;
+text-decoration: none;
 `;

@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-
   min-width: 100%;
   background: ${({ theme }) => theme.mainColor};
   display: flex;
   justify-content: space-around;
   align-items: center;
-  // min-height: 6vh;
-  overflow: hidden;
+ 
 
 
   ul {
@@ -23,13 +21,14 @@ export const Nav = styled.nav`
   }
 
   a {
+    margin:0;
     text-decoration: none;
-    padding: 15px;
-   min-width: 31%;
+    padding: 0px;
     display: flex;
     overflow: hidden;
     justify-content: center;
     background: ${({ theme }) => theme.mainColor}; 
+
     
     @media (max-width: ${({ theme }) => theme.tablet}) {
       min-width: 28.5%;
@@ -37,10 +36,13 @@ export const Nav = styled.nav`
   }
 
   li {
+    // width: 100%;
     color: black;
+    padding: 15px 10px;
     font-weight: bold;
     justify-content: space-between;
     overflow: hidden;
+
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
       font-size: 14px;

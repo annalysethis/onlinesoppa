@@ -13,7 +13,6 @@ export const ImgWrapper = styled.div`
 
 export const Title = styled.h3`
   text-align: center;
-  font-weight: 1000;
   margin: 25px 0 0 0;
 `;
 

@@ -1,10 +1,19 @@
+// import React, {useContext} from 'react'
+// import * as styled from "./ShoppingList.styled";
+// import GoBackBtn from "../../GoBackBtn"
+// import ShoppingCart from ".."
+// import {CartContext} from "../CartContext";
+// import { calculateCart } from "./index.js";
+// import CartButton from "../CartButton";
+
 import React, {useContext} from 'react'
 import * as styled from "./ShoppingList.styled";
-import GoBackBtn from "../GoBackBtn"
-import ShoppingCart from "../ShoppingCart"
-import {CartContext} from "../ShoppingCart/CartContext";
+import GoBackBtn from "../../GoBackBtn"
+import ShoppingCart from ".."
+import {CartContext} from "../CartContext";
 import { calculateCart } from "./index.js";
 import CartButton from "../CartButton";
+
 
 export default function ShoppingList(props) {
     const [cart, setCart] = useContext(CartContext)
@@ -28,10 +37,11 @@ export default function ShoppingList(props) {
 
       setCart(cart.filter((product) => product.title !== productToRemove.title));
       };
+
       let soupAmounts = calculateCart(cart);
       const totalPrice = soupAmounts.reduce((acc, curr) => acc + (curr.price * curr.amount), 0);
     return (
-        <div>
+        <styled.MainContainer>
         <styled.HeaderWrapper>
         <GoBackBtn/>
             <h2>VARUKORG</h2>
@@ -39,7 +49,8 @@ export default function ShoppingList(props) {
             </styled.HeaderWrapper>
 
             <styled.TitleWrapper>
-          <h4>Antal</h4><h4>Pris</h4>
+          <styled.AmountTitle>Antal</styled.AmountTitle>
+          <styled.PriceTitle>Pris</styled.PriceTitle>
           </styled.TitleWrapper>
         <styled.ProductContainer>
           {soupAmounts.map((product, idx) => {
@@ -60,20 +71,24 @@ export default function ShoppingList(props) {
           })}
  <hr/>
           </styled.ProductContainer>
+
           <styled.SectionContainer>
             <h3>Meddelande till Köket</h3>
             <p>Här kan du skriva om det är något du vill ta bort eller lägga till i din beställning.</p>
 <textarea type="text"></textarea>
 <styled.SaveBtn>Spara</styled.SaveBtn>
-
 </styled.SectionContainer>
 
-          <styled.TotalPrice>
+      
+         <styled.TotalPrice>
           <h3>Totalt (ink.moms):</h3>
           <h3>{totalPrice}</h3>
           </styled.TotalPrice>
-
+          <styled.StyledLink to="/address">
           <CartButton/>
-            </div>
+          </styled.StyledLink>
+       
+          
+            </styled.MainContainer>
     )
 }

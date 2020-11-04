@@ -1,12 +1,34 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+export const MainContainer = styled.div`
+width:100%;
+position: relative;
+overflow:hidden;
+`;
+
+
+export const HeaderWrapper = styled.div`
+min-width:100%;
+z-index:1;
+position:fixed;
+
+
+`;
+
 export const Container = styled.div`
+padding-top:80px;
+`;
+
+// ********************** Styled Products ***********************
+
+export const ProductContainer = styled.div`
   padding:10px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #eee;
+
   
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
@@ -17,20 +39,35 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-position:relative;
 width:50%;
 display: flex:
 flex-direction: column;
 
+@media (max-width: ${({ theme }) => theme.tablet}) {
+    width:40%;
+    
+  }
+
 
 @media (max-width: ${({ theme }) => theme.mobile}) {
   width:100%;
+  padding: 0 0 20px 0;
 
 }
 `;
 
+export const Images = styled.img`
+  margin: 0;
+  width: 400px;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 100%;
+  }
+`;
+
 export const ImgWrapper = styled.div`
-position:relative;
+
+  position:relative;
 width: 350px;
 height: 250px;
   overflow: hidden;
@@ -51,7 +88,7 @@ export const Info = styled.p`
   margin: 0;
 `;
 
-export const SoupType = styled.p`
+export const DrinkType = styled.p`
   padding: 10px 10px 0px 10px;
   margin: 0;
   text-transform: uppercase;
@@ -64,7 +101,7 @@ export const SoupType = styled.p`
 
 
 export const IngredientsList = styled.ul`
-display: flex;
+  display: flex;
   flex-direction: row;
   padding-left: 10px;
   margin: 0;
@@ -73,7 +110,7 @@ display: flex;
   li {
     display:flex;
     justify-content: center; 
-    align-items: center; 
+ align-items: center; 
     list-style: none;
     background: #f6f6f6;
     margin: 0 5px 0 5px;
@@ -116,4 +153,3 @@ export const titlePriceWrapper = styled.div`
   }
  
 `;
-

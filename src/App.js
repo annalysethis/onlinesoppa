@@ -18,6 +18,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Routes />
+        {/* <div id="modal-root"></div> */}
       </ThemeProvider>
       </CartProvider>
     </Router>

@@ -1,14 +1,11 @@
 import React, { Component, useContext  } from "react";
-import {CartContext} from "../ShoppingCart/CartContext"
+// import {CartContext} from "../ShoppingCart/CartContext"
 import { data } from "../Data/data";
 import * as styled from "./SoupMenu.styled";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "./../Navbar";
 import FoodFilter from "./../FoodFilter";
 import Header from "../Header"
-
-
-
 
 class SoupMenu extends Component {
   
@@ -18,6 +15,7 @@ class SoupMenu extends Component {
     btns: ["Kött", "Kyckling", "Fisk", "Vegansk"],
   };
 
+  
   //filtering button functionality
   handleBtns = (e) => {
     // console.log(e.target.value);
@@ -44,6 +42,7 @@ class SoupMenu extends Component {
       <Header/>
       </styled.HeaderWrapper>
       <styled.Container>
+        {/* <Location adress={this.props.location.state && this.props.location.state.adress}/> */}
         <styled.AdressWrapper>
           <styled.StyledMapIcon icon={faMapMarkerAlt} />
 

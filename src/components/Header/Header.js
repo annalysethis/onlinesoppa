@@ -9,13 +9,14 @@ import Menu from "./../Menu";
 import { useOnClickOutside } from "./../../hooks";
 // import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import ShoppingCart from "../ShoppingCart"
+import Location from "../Location";
 
 
 
 // const PAGE_PRODUCTS = "products";
 // const PAGE_CART = "cart";
 
-function Header({navigation}) {
+function Header(props) {
   
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
@@ -49,14 +50,6 @@ function Header({navigation}) {
           </styled.StyledLink>
        
       </styled.IconWrapper>
-      {/* <styled.AdressWrapper>
-          <styled.StyledMapMarkerIcon icon={faMapMarkerAlt} />
-          <div>
-          <p>
-           {props.location && props.location.adress}
-          </p>
-          </div>
-        </styled.AdressWrapper> */}
     </styled.Header>
   );
 }

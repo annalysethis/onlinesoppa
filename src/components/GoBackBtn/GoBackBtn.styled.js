@@ -15,7 +15,7 @@ font-size: 25px !important;
 
 export const Btn = styled.button`
 position:absolute;
-padding:20px;
+padding:15px;
 border: none;
 background: none;
 cursor:pointer;

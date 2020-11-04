@@ -12,6 +12,7 @@ import {
   } from "@fortawesome/free-solid-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
   import GoBackBtn from "../GoBackBtn";
+  import user from "../../images/user.jpg"
 
 export default function AccountPage() {
     return (
@@ -20,6 +21,7 @@ export default function AccountPage() {
                 <GoBackBtn/>
                 
                 <styled.YellowBox></styled.YellowBox>
+                <img src={user} alt="User Image"/><h4>CHLOÉ WILSON</h4>
             </styled.AccountHeader>
            <styled.List>
                <li><styled.StyledIcon icon={faFlag}/> CHANGE LANGUAGE <styled.StyledAngleIcon icon={faAngleRight} /></li>

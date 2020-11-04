@@ -6,7 +6,7 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      adress: "",
+      adress: "Stockholmsvägen 75",
     };
   }
 
@@ -53,3 +53,4 @@ class Form extends Component {
 }
 
 export default withRouter(Form);
+

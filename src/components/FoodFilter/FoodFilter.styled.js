@@ -9,7 +9,6 @@ export const BtnContainer = styled.div`
 `;
 // top right bottom left
 export const Button = styled.button`
-  // margin: 15px;
   background: ${({ theme }) => theme.primaryLight};
   border: none;
   font-size: 17px;

@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const AddBtn = styled.button`
 
-right: 1rem;
+right:1rem;
 position:absolute;
-bottom: 1rem;
+bottom: 10px;
 border-radius: 50%;
 display: flex;
 flex-direction: column;
@@ -15,8 +15,6 @@ background: ${({ theme }) => theme.mainColor};
 border: none;
 cursor: pointer;
 padding: 0;
-
-
 
 &:focus {
   outline: none;
@@ -32,14 +30,9 @@ div{
   margin:auto;
   
 
-  // @media (max-width: ${({ theme }) => theme.mobile}) {
-  //   width: 2rem;
-  //   transform-origin: 2px;
-  // }
-
   :first-child {
     top:17px;
-    transform: ${({ open }) => (open ? "rotate(20deg)" : "rotate(0deg)")};
+    transform: ${({ open }) => (open ? "rotate(30deg)" : "rotate(0deg)")};
     height: 3px;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -50,8 +43,8 @@ div{
   :nth-child(2) {
     left: 20px;
     
-    opacity: ${({ open }) => (open ? "0" : "1")};
-    transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(-90deg)")};
+    opacity: ${({ open }) => (open ? "1" : "1")};
+    transform: ${({ open }) => (open ? "rotate(-50deg)" : "rotate(-90deg)")};
     height: 3px;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
